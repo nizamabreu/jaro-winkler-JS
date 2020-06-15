@@ -25,9 +25,9 @@ jaro_winkler.distance = function(a, b) {
     var lowlim = (i >= search_range) ? i - search_range : 0;
     var hilim  = ((i + search_range) <= yl1) ? (i + search_range) : yl1;
     for (var j = lowlim; j <= hilim; j++) {
-      if (b_flag[j] !== 1 && a[j] === b[i]) {
-        a_flag[j] = 1;
-        b_flag[i] = 1;
+      if (b_flag[j] !== 1 && a[i] === b[j]) {
+        a_flag[i] = 1;
+        b_flag[j] = 1;
         Num_com++;
         break;
       }
